@@ -1,0 +1,11 @@
+# Secrets: never commit these (Lesson 1.3.4)
+.env
+.env.*
+
+# Personal Claude Code files (Lesson 1.1.7)
+CLAUDE.local.md
+.claude/settings.local.json
+
+# Practice repos that have their own Git history (Module 1.3)
+01-University/exercises/sandbox-1.3.1/
+01-University/exercises/sandbox-1.3.4/

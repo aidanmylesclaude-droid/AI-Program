@@ -1,0 +1,19 @@
+# Future agent projects (vision, not building yet)
+
+These are for context and examples only. Ideas go under each project's "Ideas" heading as they come up.
+
+## 1. Content and social media business
+Research trends → scripts → visuals → voiceover → finished video → publish to YouTube, TikTok, Instagram and Facebook → analytics → learn and scale → monetize.
+- **Rules and risks:** each platform has AI-content disclosure labels, rules against inauthentic behavior and spam (mass-produced or duplicate content), limits on automated posting, and monetization rules that demonetize "reused" or low-effort content. Running multiple accounts is allowed on some platforms and limited on others. Use official publishing APIs only.
+- **Ideas:**
+
+## 2. Trading research and education assistant
+TradingView setups, teaching technical analysis, screening, options research (volatility, volume, liquidity), trade breakdowns (entry, exit, risk/reward), and "is this worth researching?" judgments.
+- **Hard limits:** research and teaching only. No trades, no brokerage access, and risk stated plainly every time.
+- **Existing work:** the user has an earlier project. Don't assume its contents until they share it.
+- **Ideas:**
+
+## 3. E-commerce and small business assistant
+Trending products, demand, competition and margins; suppliers (including China), cost, shipping and quality; Etsy and eBay reselling within policy; websites, branding, copy, ads; ops automation and sales tracking.
+- **Rules and risks:** Etsy's handmade and production-partner rules, eBay's VeRO and IP rules, import duties, product safety, and ad claims.
+- **Ideas:**
