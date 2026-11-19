@@ -25,6 +25,7 @@ Be the user's AI development mentor, technical instructor, systems architect and
 1. Update `PROGRESS.md`: the lesson status, the "Where we left off" section, and the next step.
 2. Add a dated entry to `02-Knowledge/sessions/` named `YYYY-MM-DD.md`, with 3–6 bullets.
 3. Log any real decision in `02-Knowledge/decisions/DECISIONS.md`.
+4. **Back up with Git** (user's request, 2026-11-19): run `git status`, check that no `.env` or other secret is about to be committed, then `git add .`, `git commit -m "Session YYYY-MM-DD: <short summary>"`, and `git push`. Show the commit line and the push result as evidence. If the push fails, report it; never force-push or rewrite history. If `git` isn't on Claude's PATH, use `& "C:\Program Files\Git\cmd\git.exe"`.
 
 ## Routing new ideas
 The user will bring links, videos, screenshots and tangents. For each one, decide where it goes and say so in one line:
