@@ -2,6 +2,9 @@
 .env
 .env.*
 
+# Python virtual environments: rebuild from requirements.txt (Lesson 1.4.2)
+.venv/
+
 # Personal Claude Code files (Lesson 1.1.7)
 CLAUDE.local.md
 .claude/settings.local.json

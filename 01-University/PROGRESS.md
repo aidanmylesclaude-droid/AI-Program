@@ -1,16 +1,23 @@
 # Progress
 
 ## Where we left off
-- **Date:** 2026-11-18 (desktop app, Code tab). Detail is in `02-Knowledge/sessions/2026-11-17.md` and `2026-11-18.md`.
-- **Done so far:** **Modules 1.1 and 1.2 complete**; Module 1.3: 1.3.1–1.3.3 done (18 lessons). Global `~\.claude\CLAUDE.md` created. Git installed; GitHub account with a private `git-practice` repo. The user's desktop sessions run in **Auto** mode.
-- **Start next session with:** a one-line re-ask of 1.3.3 Q2 ("You push a file with an API key, then delete it in the next commit. Is the key safe?" Answer: no, it's still in history; revoke it).
+- **Date:** 2026-11-19 (desktop app, Code tab). Detail is in `02-Knowledge/sessions/` (2026-11-17, -18, -19).
+- **Done so far:** Modules **1.1–1.4 complete**; Module 1.5: **1.5.1–1.5.2 done** (24 lessons). Global `~\.claude\CLAUDE.md`; Git; GitHub (private `git-practice` and `AI-Program` repos). Desktop sessions run in **Auto** mode. **Fast mode** is on (see CLAUDE.md).
+- **Current lesson:** **1.5.3** MCP, connectors, integrations and plugins. Written and taught; `claude mcp list` was run (shows claude.ai Gmail + Claude Docs connectors). **Only the 2-question knowledge check is left**: (1) MCP vs MCP server vs connector, (2) why not connect every MCP server from a video. Start next session with it, then 1.5.4 (skills, slash commands, hooks).
+- **Open question for Stage 3.1/3.3:** Gmail is connected to every Claude Code session, including this program. Least privilege suggests disabling it here; ask the user.
 - **Git:** 2.56.1 at `C:\Program Files\Git`; global `~\.gitconfig` has the user's name and GitHub noreply email. If Claude's shell can't find `git`, use `& "C:\Program Files\Git\cmd\git.exe"`. Trust only Git output pasted straight from a window (earlier unverified output was wrong).
 - **1.3.4 done (2026-11-19). Module 1.3 complete.** `sandbox-1.3.1` now has a `.gitignore` (`.env`), pushed as `0924f1b`; `.env` is on disk only. `sandbox-1.3.4` (local only, never pushed) showed the trap: a committed `secrets.txt` stays in history after `rm --cached`.
 - **Tip that worked:** give multi-step commands as ONE line joined with `;`. Copying several boxes at once joins them without spaces.
 - **AI-Program is backed up (2026-11-19):** a Git repo with `.gitignore` (`.env`, `.env.*`, `CLAUDE.local.md`, `.claude/settings.local.json`, nested sandbox repos 1.3.1 and 1.3.4). First commit `7772fd3` (47 files, no secrets; scan found only fake examples). Pushed to **private** GitHub repo `AI-Program`, verified in sync with `origin/main`.
-- **Next step:** Module 1.4, starting with 1.4.1 Reading a Python script line by line (good material: the user's own `tiny_predictor.py` and `agent_loop.py`).
+- **1.4.1 done (2026-11-19):** read `tiny_predictor.py` with the four questions (what it says, reads, changes or sends, where it stops); the safety scan with `Select-String` found nothing; changed the start word to `video`, ran it, then `git diff` + `git restore`.
+- **1.4.2 done (2026-11-19):** `sandbox-1.4.2\.venv` holds `requests` 2.34.2 (plus 4 dependencies); the global Python stays clean. `requirements.txt` was made with `pip freeze | Set-Content`. `.venv/` is in AI-Program's `.gitignore`. **Convention:** use a venv **without activating it** (`.venv\Scripts\python.exe ...`), so no execution-policy change is needed.
+- **1.4.3 done (2026-11-19). Module 1.4 complete.** Read nested made-up market JSON (`sandbox-1.4.3/market.json`) with `read_market.py`; the safety scan flagged `open(` and the user read it as read-only; met `KeyError`.
+- **1.5.1 done (2026-11-19):** first real API call. `sandbox-1.5.1\fx_rates.py` calls Frankfurter (free, no key, central-bank reference rates, not trading prices) with checks for status, count and freshness. The venv was rebuilt from 1.4.2's `requirements.txt`. The user saw 200 OK (3 of 3, 0 days old) and a deliberate 422 error.
+- **Fast mode since 2026-11-19 (CLAUDE.md rule):** Claude runs exercises; the user predicts, then answers 2 questions.
+- **Curriculum condensed 2026-11-19** at the user's request (see DECISIONS.md): about 34 lessons remain. Keep lessons lean: short explanations, one-line commands, 2-question checks.
+- **1.5.2 done (2026-11-19):** `sandbox-1.5.2` has `use_key.py` (python-dotenv, masked output) and a fake key in `.env`, typed in Notepad. `.env` was confirmed ignored by the root `.gitignore`; Claude checked without reading `.env`.
 - **Note:** the user's PowerShell sometimes opens in `C:\WINDOWS\System32`. That is **not always** Administrator: on 2026-11-19 it was a normal window (writes to `C:\Windows` were "Access denied"). Correction to the earlier "System32 = admin" claim. Either way, always start exercises with an **absolute** `cd ~\AI-Program\...` instead of relative `cd ..`.
-- **How to teach this user:** predict-then-run checks, low pressure (CLAUDE.md rule; earlier pasted answers came from "not sure I'm right"). Put each command in its own code box and remind them: Enter after each, and only commands go in the terminal.
+- **How to teach this user:** fast mode: Claude runs commands; the user predicts and answers 2 low-pressure questions. When the user must type something, give ONE line joined with `;`, starting with an absolute `cd`.
 - **Open items:** Ask what `~\test-project` is (seen in `~\.claude\projects`), at a natural moment. The trading-research project hasn't been shared yet; don't assume anything about it.
 
 ## Knowledge-check results
@@ -35,6 +42,11 @@
 | 1.3.2 | 2026-11-18 | Predictions ✓ (modified; `-` old / `+` new; 3 log lines). Check 3/3 own words ✓ | First pass skipped the damage step. Ask for pasted output before moving on |
 | 1.3.3 | 2026-11-18 | Push ✓, GitHub showed 5 commits and Private ✓. Check: Q1 no/yes ✓ (or partial), Q3 privacy ✓. **Q2 possibly answered "yes, the key is safe" ✗** | A pushed secret is never safe, even if deleted later: revoke it. Re-asked 2026-11-19 → answered correctly ✓ |
 | 1.3.4 | 2026-11-19 | Predictions ✓ (.env untracked → disappears; password still in history). Check 3/3 own words ✓ (Q1 short: "it's already tracked") | Several "it worked" reports before commands had actually run. Keep verifying from Claude's side |
+| 1.4.1 | 2026-11-19 | Exercise ✓ (scan silent; `video got more …` with two endings; diff `-the` / `+video`; restore). Check 3/3 own words ✓ | None |
+| 1.4.2 | 2026-11-19 | Predictions ✓ (global can't import; only requirements.txt to Git). Check 3/3 own words ✓ | None |
+| 1.4.3 | 2026-11-19 | Exercise ✓ (scan hit read as read-only; 2 up days; KeyError read bottom-up). Check 3/3 own words ✓ | Zero-based counting: reinforce in 1.5.1 |
+| 1.5.1 | 2026-11-19 | Exercise ✓ (200, 3/3, fresh; 422 on a bad currency). Check 3/3 own words (Q3 "no" without the reason) | Why reference rates aren't tradable prices: revisit in the Stage 1 capstone |
+| 1.5.2 | 2026-11-19 | Exercise ✓ (masked key found; `.env` ignored). Check 2/2 own words ✓ | None |
 
 ## Stage status
 | Stage | Status |

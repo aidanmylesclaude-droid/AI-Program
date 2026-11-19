@@ -34,56 +34,40 @@ Lessons are written as we reach them, so they reflect the current tools and your
 - [x] 1.3.4 `.gitignore` and keeping secrets out of history
 
 ### Module 1.4: Minimum code literacy *(added)*
-- [ ] 1.4.1 Reading a Python script line by line
-- [ ] 1.4.2 Packages, virtual environments and `pip`, so projects don't share libraries
-- [ ] 1.4.3 JSON: the language APIs speak
+- [x] 1.4.1 Reading a Python script line by line
+- [x] 1.4.2 Packages, virtual environments and `pip`, so projects don't share libraries
+- [x] 1.4.3 JSON: the language APIs speak
 
 ### Module 1.5: The ecosystem, one concept at a time
 Each lesson answers: what it is, what it does, why it exists, how it works, how it connects to Claude Code, when you'd need it, and an example from your projects.
-- [ ] 1.5.1 APIs, with a hands-on call to a free market-data API
-- [ ] 1.5.2 API keys, secrets and `.env` files
-- [ ] 1.5.3 MCP (Model Context Protocol): connecting Claude to outside apps
-- [ ] 1.5.4 Connectors vs integrations vs plugins vs MCP servers: what's the difference?
-- [ ] 1.5.5 Skills and slash commands: reusable playbooks
-- [ ] 1.5.6 Hooks: automatic rules the harness enforces
-- [ ] 1.5.7 Subagents: when to delegate, and when it just wastes money
-- [ ] 1.5.8 Memory systems: CLAUDE.md, auto-memory, vaults, databases
-- [ ] 1.5.9 Models and orchestration: picking a model, routing work, cost
-- [ ] 1.5.10 Automation tools (schedulers, n8n/Zapier-style tools) vs agents
-- [ ] 1.5.11 The "you don't need this" list
+- [x] 1.5.1 APIs, with a hands-on call to a free market-data API
+- [x] 1.5.2 API keys, secrets and `.env` files
+- [~] 1.5.3 Connecting Claude to outside apps: MCP, connectors, integrations and plugins *(merged: old 1.5.3 + 1.5.4)*
+- [ ] 1.5.4 Customizing Claude Code: skills, slash commands and hooks *(merged: old 1.5.5 + 1.5.6)*
+- [ ] 1.5.5 Delegation, models and cost: subagents, picking a model, routing work *(merged: old 1.5.7 + 1.5.9)*
+- [ ] 1.5.6 Recap: memory systems, and the "you don't need this" list *(merged: old 1.5.8 + 1.5.11; mostly review of 1.1.7 and 1.2.4)*
 
-### Module 1.6: How autonomous agents work
-- [ ] 1.6.1 Chatbot → assistant → workflow → agent → multi-agent system
-- [ ] 1.6.2 From objective to task list: planning
-- [ ] 1.6.3 Tools, outside information, and chaining tools together
-- [ ] 1.6.4 Remembering between sessions
-- [ ] 1.6.5 Noticing and recovering from errors
-- [ ] 1.6.6 Monitoring and finishing without supervision
-- [ ] 1.6.7 What makes an agent truly autonomous, plus a reference architecture
-- [ ] 1.6.8 Security for agents: prompt injection, least privilege, human approval steps
+### Module 1.6: How autonomous agents work *(condensed from 8 lessons to 4)*
+- [ ] 1.6.1 Chatbot → assistant → automated workflow (schedulers, n8n/Zapier) → agent → multi-agent system *(includes old 1.5.10)*
+- [ ] 1.6.2 Planning and tools: objective to task list, chaining tools and outside data *(old 1.6.2 + 1.6.3)*
+- [ ] 1.6.3 Running without supervision: memory between sessions, error recovery, monitoring *(old 1.6.4–1.6.6; builds on 1.2.3–1.2.4)*
+- [ ] 1.6.4 Autonomy and security: reference architecture, prompt injection, least privilege, human approval steps *(old 1.6.7 + 1.6.8; security kept in full)*
 
 ### Stage 1 capstone
 - [ ] 1.C Market-data script: API call, saved results, explained output, committed to Git
 
-## Stage 2: Second Brain (Obsidian)
-- [ ] 2.1 What Obsidian is and why it works as a second brain
-- [ ] 2.2 Install it and open *this folder* as the vault (click by click)
-- [ ] 2.3 How Claude Code reads the vault: direct file access vs Obsidian MCP/plugins (pros, cons, setup)
-- [ ] 2.4 Note types: permanent instructions, reference, active context, temporary, long-term
-- [ ] 2.5 Links, tags, properties and templates
-- [ ] 2.6 Maintenance: weekly review, finding duplicates, archiving stale notes
-- [ ] 2.C Proof test: a fresh session answers from the vault and cites the note
+## Stage 2: Second Brain (Obsidian) *(condensed from 7 to 4)*
+- [ ] 2.1 What Obsidian is, why it works as a second brain, and opening *this folder* as the vault (click by click)
+- [ ] 2.2 How Claude Code reads the vault: direct file access vs Obsidian MCP/plugins (pros, cons, setup)
+- [ ] 2.3 Organizing notes: note types (permanent, reference, active, temporary, long-term), links, tags, properties, templates
+- [ ] 2.C Maintenance routine, plus proof test: a fresh session answers from the vault and cites the note
 
-## Stage 3: Optimization Center
-- [ ] 3.1 Review: settings and permissions
-- [ ] 3.2 Review: instruction files and memory
-- [ ] 3.3 Review: skills, hooks and slash commands
-- [ ] 3.4 Review: MCP servers, connectors, APIs
-- [ ] 3.5 Review: GitHub, open-source tools, dev, test and debug tools
-- [ ] 3.6 Review: subagents, orchestration, automation frameworks
-- [ ] 3.7 Security hardening
-- [ ] 3.8 Using the stack advisor and tool research desk (repeatable processes)
-- [ ] 3.C `STACK.md` finalized
+## Stage 3: Optimization Center *(condensed from 9 to 5: hands-on setup, no re-teaching of Module 1.5)*
+- [ ] 3.1 Settings, permissions and security hardening (including a `deny` rule for `.env`)
+- [ ] 3.2 Instruction files, memory, skills, hooks and slash commands: set up only what you need
+- [ ] 3.3 MCP servers, connectors and APIs: choose and connect
+- [ ] 3.4 Dev, test and debug tools, subagents and automation: what to adopt and what to skip
+- [ ] 3.C Stack advisor and tool research desk as repeatable processes; `STACK.md` finalized
 
 ## Stage 4: First agents
 - [ ] 4.1 Claude Agent SDK vs Claude Code headless mode vs no-code tools

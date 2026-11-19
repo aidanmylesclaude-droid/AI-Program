@@ -1,0 +1,11 @@
+{
+  "source": "EXAMPLE DATA for Lesson 1.4.3 - not real prices",
+  "symbol": "SPY",
+  "currency": "USD",
+  "bars": [
+    {"date": "2026-11-16", "open": 510.10, "close": 512.30, "volume": 61200000},
+    {"date": "2026-11-17", "open": 512.40, "close": 515.80, "volume": 58400000},
+    {"date": "2026-11-18", "open": 515.50, "close": 510.60, "volume": 73900000}
+  ],
+  "next_page": null
+}

@@ -2,6 +2,17 @@
 
 Newest entries go first. Each entry: date, decision, why, and what would make us revisit it.
 
+## 2026-11-19: Fast mode. Claude runs the exercises; the user predicts and answers
+- **What:** the user asked Claude to "take control and finish everything". Claude can't do the learning for them, so the compromise is: Claude runs commands and shows output, and the user predicts first and answers 2-question checks. The user still does installs, accounts, sign-ins and approvals.
+- **Why:** most time was going to typing, pasting and joined-command errors, not learning. Predictions keep the learning active.
+- **Revisit if:** knowledge-check results drop, or before Stage 4 (building agents), where hands-on practice matters more.
+
+## 2026-11-19: Curriculum condensed (remaining ~51 lessons → 34)
+- **What:** merged overlapping lessons. Module 1.5's 1.5.3–1.5.11 became 1.5.3–1.5.6; Module 1.6 went from 8 lessons to 4; Stage 2 from 7 to 4; Stage 3 from 9 to 5 (hands-on setup only, no re-teaching). Stages 4–6 unchanged. Lessons are also leaner: one-line commands and 2-question checks.
+- **Why:** the user asked to go faster. Real overlap existed (Stage 3 re-reviewed Module 1.5 topics; 1.6 repeated 1.2.3–1.2.4; memory was mostly covered in 1.1.7 and 1.2.4).
+- **Kept in full:** 1.5.2 (API keys), agent security (now in 1.6.4), all capstones, Stages 4–6.
+- **Revisit if:** a merged lesson feels rushed or knowledge checks start slipping. Then split it back.
+
 ## 2026-11-19: Claude commits and pushes AI-Program at the end of every session
 - **What:** step 4 of the end-of-session protocol in CLAUDE.md: check for secrets, then commit ("Session YYYY-MM-DD: …") and push to the private `AI-Program` repo.
 - **Why:** the GitHub backup only covers what's committed and pushed, and remembering to do it by hand is easy to forget. One commit per session also gives a readable history.

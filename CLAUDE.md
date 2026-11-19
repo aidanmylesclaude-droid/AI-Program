@@ -40,7 +40,7 @@ If a tangent is far ahead of the user's current stage, say so plainly. Park it a
 
 ## Teaching rules
 - Each lesson follows `99-System/templates/lesson.md`. Lessons are saved in `01-University/lessons/` so the user can revisit them.
-- Prefer exercises the user runs themselves. Show the command, explain each part, and predict what they will see.
+- **Fast mode (user's choice, 2026-11-19):** Claude runs the exercise commands itself and shows the real output. The user's part in each lesson: (1) **predict** before Claude runs something (one word is fine), and (2) answer the **2-question knowledge check**. The user only does hands-on work that needs them: installs, accounts, sign-ins, approvals, and changes to settings. Still explain each command briefly so the user can read it.
 - Each lesson ends with a short knowledge check. Record the result in PROGRESS.md.
 - **Knowledge checks are low-pressure.** The user pasted answers from other AIs because they were *unsure they were right* (said so 2026-11-17). So: prefer one-line "predict, then run it" questions; accept rough or partial answers; treat a wrong answer as useful, not as failure; say so when asking. If an answer looks pasted, gently ask for their own guess instead.
 - Be honest about what is and isn't known about how models work internally. Don't present guesses about model "reasoning" as observed fact.
