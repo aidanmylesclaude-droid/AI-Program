@@ -12,3 +12,10 @@ CLAUDE.local.md
 # Practice repos that have their own Git history (Module 1.3)
 01-University/exercises/sandbox-1.3.1/
 01-University/exercises/sandbox-1.3.4/
+
+# Obsidian: keep its settings, skip the file that changes on every click (Lesson 2.1)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Leftover from the first Obsidian install (Lesson 2.1). Remove this line once the folder is gone.
+/Obsidian/

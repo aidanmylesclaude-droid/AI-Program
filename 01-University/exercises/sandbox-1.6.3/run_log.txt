@@ -1,0 +1,15 @@
+2026-11-20 08:38:57 INFO  run #1 started (last success: None)
+2026-11-20 08:38:57 INFO  attempt 1: OK, 1 USD = 0.91045 EUR
+2026-11-20 08:38:57 INFO  run #1 finished
+2026-11-20 08:40:07 INFO  run #2 started (last success: 2026-11-20 08:38:57)
+2026-11-20 08:40:07 INFO  attempt 1: OK, 1 USD = 0.91045 EUR
+2026-11-20 08:40:07 INFO  change since last success: +0.0000
+2026-11-20 08:40:07 INFO  run #2 finished
+2026-11-20 08:40:08 INFO  run #3 started (last success: 2026-11-20 08:40:07)
+2026-11-20 08:40:08 ERROR attempt 1: simulated outage
+2026-11-20 08:40:08 INFO  waiting 1s before retrying
+2026-11-20 08:40:09 ERROR attempt 2: simulated outage
+2026-11-20 08:40:09 INFO  waiting 2s before retrying
+2026-11-20 08:40:11 ERROR attempt 3: simulated outage
+2026-11-20 08:40:11 ERROR ALERT: gave up after 3 attempts. Kept the last good data. A human should look.
+2026-11-20 08:40:11 INFO  run #3 finished

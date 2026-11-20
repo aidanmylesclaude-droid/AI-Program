@@ -42,35 +42,35 @@ Lessons are written as we reach them, so they reflect the current tools and your
 Each lesson answers: what it is, what it does, why it exists, how it works, how it connects to Claude Code, when you'd need it, and an example from your projects.
 - [x] 1.5.1 APIs, with a hands-on call to a free market-data API
 - [x] 1.5.2 API keys, secrets and `.env` files
-- [~] 1.5.3 Connecting Claude to outside apps: MCP, connectors, integrations and plugins *(merged: old 1.5.3 + 1.5.4)*
-- [ ] 1.5.4 Customizing Claude Code: skills, slash commands and hooks *(merged: old 1.5.5 + 1.5.6)*
-- [ ] 1.5.5 Delegation, models and cost: subagents, picking a model, routing work *(merged: old 1.5.7 + 1.5.9)*
-- [ ] 1.5.6 Recap: memory systems, and the "you don't need this" list *(merged: old 1.5.8 + 1.5.11; mostly review of 1.1.7 and 1.2.4)*
+- [x] 1.5.3 Connecting Claude to outside apps: MCP, connectors, integrations and plugins *(merged: old 1.5.3 + 1.5.4)*
+- [x] 1.5.4 Customizing Claude Code: skills, slash commands and hooks *(merged: old 1.5.5 + 1.5.6)*
+- [x] 1.5.5 Delegation, models and cost: subagents, picking a model, routing work *(merged: old 1.5.7 + 1.5.9)*
+- [x] 1.5.6 Recap: memory systems, and the "you don't need this" list *(merged: old 1.5.8 + 1.5.11; mostly review of 1.1.7 and 1.2.4)*
 
 ### Module 1.6: How autonomous agents work *(condensed from 8 lessons to 4)*
-- [ ] 1.6.1 Chatbot → assistant → automated workflow (schedulers, n8n/Zapier) → agent → multi-agent system *(includes old 1.5.10)*
-- [ ] 1.6.2 Planning and tools: objective to task list, chaining tools and outside data *(old 1.6.2 + 1.6.3)*
-- [ ] 1.6.3 Running without supervision: memory between sessions, error recovery, monitoring *(old 1.6.4–1.6.6; builds on 1.2.3–1.2.4)*
-- [ ] 1.6.4 Autonomy and security: reference architecture, prompt injection, least privilege, human approval steps *(old 1.6.7 + 1.6.8; security kept in full)*
+- [x] 1.6.1 Chatbot → assistant → automated workflow (schedulers, n8n/Zapier) → agent → multi-agent system *(includes old 1.5.10)*
+- [x] 1.6.2 Planning and tools: objective to task list, chaining tools and outside data *(old 1.6.2 + 1.6.3)*
+- [x] 1.6.3 Running without supervision: memory between sessions, error recovery, monitoring *(old 1.6.4–1.6.6; builds on 1.2.3–1.2.4)*
+- [x] 1.6.4 Autonomy and security: reference architecture, prompt injection, least privilege, human approval steps *(old 1.6.7 + 1.6.8; security kept in full)*
 
 ### Stage 1 capstone
-- [ ] 1.C Market-data script: API call, saved results, explained output, committed to Git
+- [x] 1.C Market-data script: API call, saved results, explained output, committed to Git
 
 ## Stage 2: Second Brain (Obsidian) *(condensed from 7 to 4)*
-- [ ] 2.1 What Obsidian is, why it works as a second brain, and opening *this folder* as the vault (click by click)
-- [ ] 2.2 How Claude Code reads the vault: direct file access vs Obsidian MCP/plugins (pros, cons, setup)
-- [ ] 2.3 Organizing notes: note types (permanent, reference, active, temporary, long-term), links, tags, properties, templates
-- [ ] 2.C Maintenance routine, plus proof test: a fresh session answers from the vault and cites the note
+- [x] 2.1 What Obsidian is, why it works as a second brain, and opening *this folder* as the vault (click by click)
+- [x] 2.2 How Claude Code reads the vault: direct file access vs Obsidian MCP/plugins (pros, cons, setup)
+- [x] 2.3 Organizing notes: note types (permanent, reference, active, temporary, long-term), links, tags, properties, templates
+- [x] 2.C Maintenance routine, plus proof test: a fresh session answers from the vault and cites the note
 
 ## Stage 3: Optimization Center *(condensed from 9 to 5: hands-on setup, no re-teaching of Module 1.5)*
-- [ ] 3.1 Settings, permissions and security hardening (including a `deny` rule for `.env`)
-- [ ] 3.2 Instruction files, memory, skills, hooks and slash commands: set up only what you need
-- [ ] 3.3 MCP servers, connectors and APIs: choose and connect
-- [ ] 3.4 Dev, test and debug tools, subagents and automation: what to adopt and what to skip
-- [ ] 3.C Stack advisor and tool research desk as repeatable processes; `STACK.md` finalized
+- [x] 3.1 Settings, permissions and security hardening (including a `deny` rule for `.env`)
+- [x] 3.2 Instruction files, memory, skills, hooks and slash commands: set up only what you need
+- [x] 3.3 MCP servers, connectors and APIs: choose and connect
+- [x] 3.4 Dev, test and debug tools, subagents and automation: what to adopt and what to skip
+- [x] 3.C Stack advisor and tool research desk as repeatable processes; `STACK.md` finalized
 
 ## Stage 4: First agents
-- [ ] 4.1 Claude Agent SDK vs Claude Code headless mode vs no-code tools
+- [x] 4.1 Claude Agent SDK vs Claude Code headless mode vs no-code tools
 - [ ] 4.2 Bring in the earlier trading-research project and review it
 - [ ] 4.3 Build: a single-purpose research agent
 - [ ] 4.4 Evals: testing an agent's outputs

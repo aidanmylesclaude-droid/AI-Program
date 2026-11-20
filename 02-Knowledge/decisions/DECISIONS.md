@@ -2,6 +2,26 @@
 
 Newest entries go first. Each entry: date, decision, why, and what would make us revisit it.
 
+## 2026-11-20: Trading agent v1 will use the Claude API + tool use in Python, run on the PC (proposed in 4.1)
+- **What:** build v1 as a Python script calling the Claude API with our own tools (manual loop or Tool Runner), not Managed Agents, Agent SDK, headless Claude Code or no-code tools.
+- **Why:** visible, testable loop that teaches the fundamentals; reuses venv/.env/pytest/tool gate; cheap; research-only means no risky tools needed.
+- **Revisit if:** v1 works and needs to run on a schedule unattended (Stage 5: review Managed Agents scheduled deployments), or needs file/shell tools (review Agent SDK).
+
+## 2026-11-20: Gmail connector off for Claude Code sessions (least privilege)
+- **What:** Gmail (31 tools incl. send/forward) switched off for this session and as the default for new Code sessions. Not disconnected from claude.ai; no mail touched. Claude Docs and scheduled-tasks stay on.
+- **Why:** it combined all three "lethal trifecta" legs (private data, untrusted content, a way out) and no current work needs email.
+- **Revisit if:** a specific task needs email (switch on via + → Connectors for that session), or when designing the content/e-commerce agents (Stage 6): prefer read-only, with human approval before sending.
+
+## 2026-11-20: Enforced `.env` deny rules and no Bypass mode, in user settings
+- **What:** `~\.claude\settings.json` denies reading `.env` / `.env.*` anywhere, and disables Bypass mode. User approved.
+- **Why:** CLAUDE.md rules are advice; deny rules are enforced by Claude Code even if the model is fooled (prompt injection). User level so every project is covered.
+- **Revisit if:** a project legitimately needs Claude to read a non-secret `.env.example` (use a different name), or when the sandbox is set up (Stage 5).
+
+## 2026-11-20: Vault = AI-Program; Claude reads it directly (no Obsidian MCP or community plugins)
+- **What:** Obsidian opens `AI-Program` in restricted mode; `.obsidian/workspace*.json` is git-ignored.
+- **Why:** Claude Code already has file access; a bridge adds third-party code, a key and attack surface for no gain.
+- **Revisit if:** the vault is needed from a chat app without file access.
+
 ## 2026-11-19: Fast mode. Claude runs the exercises; the user predicts and answers
 - **What:** the user asked Claude to "take control and finish everything". Claude can't do the learning for them, so the compromise is: Claude runs commands and shows output, and the user predicts first and answers 2-question checks. The user still does installs, accounts, sign-ins and approvals.
 - **Why:** most time was going to typing, pasting and joined-command errors, not learning. Predictions keep the learning active.

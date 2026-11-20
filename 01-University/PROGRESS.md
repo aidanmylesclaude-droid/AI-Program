@@ -1,9 +1,29 @@
 # Progress
 
 ## Where we left off
-- **Date:** 2026-11-19 (desktop app, Code tab). Detail is in `02-Knowledge/sessions/` (2026-11-17, -18, -19).
-- **Done so far:** Modules **1.1–1.4 complete**; Module 1.5: **1.5.1–1.5.2 done** (24 lessons). Global `~\.claude\CLAUDE.md`; Git; GitHub (private `git-practice` and `AI-Program` repos). Desktop sessions run in **Auto** mode. **Fast mode** is on (see CLAUDE.md).
-- **Current lesson:** **1.5.3** MCP, connectors, integrations and plugins. Written and taught; `claude mcp list` was run (shows claude.ai Gmail + Claude Docs connectors). **Only the 2-question knowledge check is left**: (1) MCP vs MCP server vs connector, (2) why not connect every MCP server from a video. Start next session with it, then 1.5.4 (skills, slash commands, hooks).
+- **Date:** 2026-11-20 (desktop app, Code tab). Detail is in `02-Knowledge/sessions/` (2026-11-17, -18, -19).
+- **Session 2026-11-20 summary:** 22 lessons in one session (1.5.3 → 4.1). **Stages 1, 2 and 3 complete; Stage 4 started (4.1 done).** Next: 4.2 (user shares the trading-research project), then 4.3 (user sets up a Console account + API key first). Bring predictions back (skipped in 3.1–3.3, 3.C late in the long session).
+- **Done before 2026-11-20:** Modules **1.1–1.4 complete**; Module 1.5: **1.5.1–1.5.2 done**. Global `~\.claude\CLAUDE.md`; Git; GitHub (private `git-practice` and `AI-Program` repos). Desktop sessions run in **Auto** mode. **Fast mode** is on (see CLAUDE.md).
+- **1.5.3–1.5.5 done (2026-11-20):** MCP and connectors; skills, commands and hooks (the user has none yet: no personal or project skills, no hooks); subagents, models (Haiku 5.5 / Sonnet 5.5 / Opus 5.5 / Fable 5.2) and cost. The user is on a Pro plan.
+- **1.5.6 done (2026-11-20). Module 1.5 complete.** The AI-Program auto-memory folder exists but is empty (memory lives in our files).
+- **1.6.1 done (2026-11-20):** the five-level ladder (chatbot → assistant → workflow → agent → multi-agent), Anthropic's workflow vs agent definitions, n8n/Zapier as level-3 tools, the four checks (complexity, value, viability, cost of error).
+- **1.6.2 done (2026-11-20):** plan with done checks; tools (the model asks, code runs); chaining. `sandbox-1.6.2\chain_tools.py` (run with `sandbox-1.5.1`'s venv): run 1 wrote `report.txt`; run 2 with `XYZ` stopped at step 1 (422) and left the report untouched.
+- **1.6.3 done (2026-11-20):** state file, retry with backoff (3 attempts, 1s/2s), log levels, alert, keep last good data. `sandbox-1.6.3\unattended_run.py` (venv from `sandbox-1.5.1`; `outage` argument simulates a failure); `state.json` shows 3 runs.
+- **1.6.4 done (2026-11-20). Module 1.6 complete.** Reference architecture with a tool gate; prompt injection (no complete fix known); the "lethal trifecta" (private data + untrusted content + a way out); least privilege; human approval. `sandbox-1.6.4\injection_demo.py` (all tools fake, print only): the fooled model asked to email `.env` in both modes; code blocked it in safe mode. Gmail connector has all three trifecta legs: decide in Stage 3.
+- **1.C capstone done (2026-11-20). STAGE 1 COMPLETE.** `01-University/exercises/capstone-1.C/market_report.py` (own `.venv` from `requirements.txt`): weekly USD→EUR/GBP/JPY report with checks, raw JSON, explained Markdown report with risk caveats, `history.csv` with dedup, `run_log.txt`. Committed and pushed as `e06ca9f`. Learned: Frankfurter v2 returns weekend dates too (8 dates for 7 days back).
+- **2.1 done (2026-11-20):** Obsidian installed at `%LOCALAPPDATA%\Programs\Obsidian`; vault = `AI-Program`, restricted mode on. First attempt installed the app *into* `AI-Program\Obsidian` and created a new vault `Claudes Brain`; fixed by reinstalling to the default location and using "Open folder as vault". `Claudes Brain` went to the Recycle Bin. `.gitignore` now skips `.obsidian/workspace*.json` and, temporarily, `/Obsidian/`.
+- **TODO:** `AI-Program\Obsidian\` still holds 2 locked leftover app files (~25 MB). When Obsidian is fully closed, recycle the folder, then remove the `/Obsidian/` line from `.gitignore`.
+- **Lesson for install steps:** say "accept the default install location" and "Open folder as vault, NOT Create new vault" up front, with the exact button names.
+- **2.2 done (2026-11-20):** decision: direct file access, no Obsidian MCP server or community plugins (revisit only if a chat app needs the vault). Gotchas: rename notes in Obsidian (it updates links); don't edit a note while Claude does. Demo: a plain search found 2 hits for links to PROGRESS, but only HOME is a real backlink (the other was inline code).
+- **2.3 done (2026-11-20):** note types + folder/link/tag rule + properties added to `99-System/CONVENTIONS.md`; concept template now has properties. First concept note: `02-Knowledge/concepts/prompt-injection.md` (drafted by Claude from the user's 1.6.4 answers; user may rewrite in own words). Unresolved link `[[least-privilege]]` is the next concept note to write. Templates core plugin: optional, not set up.
+- **2.C done (2026-11-20). STAGE 2 COMPLETE.** `99-System/MAINTENANCE.md` (every session / weekly "vault check" / monthly). Proof test: a fresh headless session (`claude -p`, `--allowedTools Read,Grep,Glob`, edits/shell disallowed) answered both questions from `prompt-injection.md` and `PROGRESS.md` with correct line citations (all verified), and caught the stale date on line 4.
+- **3.1 done (2026-11-20):** user settings `~\.claude\settings.json` now has `permissions.deny` `Read(//**/.env)` + `Read(//**/.env.*)` and `disableBypassPermissionsMode: "disable"` (user approved). Tested on the fake `sandbox-1.5.2\.env`: Read tool and PowerShell `Get-Content` both blocked. Limit: scripts that open files themselves aren't covered (sandbox later).
+- **3.2 done (2026-11-20):** audit: global CLAUDE.md 13 lines, project 72, auto memory empty, only synced Anthropic skills, no hooks (deny rules cover the need). Created project skill `.claude/skills/vault-check/SKILL.md` (read-only, `disable-model-invocation: true`, user types `/vault-check` weekly). Tested in a fresh read-only headless session: found 1 unresolved link `[[least-privilege]]`, 0 orphans, 0 outdated, secrets scan only fakes (spot-checked by Claude). Proposed action pending: write `least-privilege.md`.
+- **3.3 done (2026-11-20):** inventory: Gmail (31 tools), Claude Docs (8), scheduled-tasks (6). User chose **Gmail off** for Code sessions (also the default for new sessions; still connected on claude.ai). Verified next turn: Gmail "disabled", 14 connector tools remain. Rule of thumb: program needs data → direct API call; Claude needs a tool mid-conversation → MCP.
+- **3.4 done (2026-11-20):** adopt/later/skip table in the lesson. Adopted **pytest 9.2.0** (per-project venv): `sandbox-3.4` has `pct.py`, `test_pct.py` (4 tests), `.venv`, `requirements.txt`. First run 3 passed / 1 failed (deliberately wrong test: -50 vs real -25); fixed the test → 4 passed. Later: Ruff, VS Code (optional), custom subagents (Stage 4); scheduling, Docker/sandbox (Stage 5). Skip: n8n/Zapier for now, frameworks.
+- **3.C done (2026-11-20). STAGE 3 COMPLETE.** Project skill `.claude/skills/tool-review/` (`/tool-review <tool>`: researches official sources, writes `03-Optimization-Center/tool-reviews/<name>.md`, never installs). Template gained Security + Platform-rules rows. First review: LangChain → ignore for now (established; overlaps; hides the loop; untested on Python 3.15); Claude spot-checked PyPI facts ✓. STACK.md finalized with "How this page stays true".
+- **4.1 done (2026-11-20):** five options compared (Claude API + tools, Agent SDK, Managed Agents (beta), headless `claude -p`, no-code). **Recommendation for trading agent v1: Claude API + tool use in Python**, on the PC (visible loop, testable, reuses venv/.env/pytest/tool gate); Managed Agents re-reviewed at Stage 5. Readiness check: 0/3 (no API key anywhere, no `anthropic` package, no `ant` CLI). **Before 4.3 the user must:** create a Claude Console account with a spending limit, create an API key, type it into the project's `.env` (Notepad), approve installing `anthropic` in that venv.
+- **Current lesson:** 4.2 Bring in the earlier trading-research project and review it. **Needs the user to share it** (where it is, or paste/copy it in). Don't assume anything about it until then.
 - **Open question for Stage 3.1/3.3:** Gmail is connected to every Claude Code session, including this program. Least privilege suggests disabling it here; ask the user.
 - **Git:** 2.56.1 at `C:\Program Files\Git`; global `~\.gitconfig` has the user's name and GitHub noreply email. If Claude's shell can't find `git`, use `& "C:\Program Files\Git\cmd\git.exe"`. Trust only Git output pasted straight from a window (earlier unverified output was wrong).
 - **1.3.4 done (2026-11-19). Module 1.3 complete.** `sandbox-1.3.1` now has a `.gitignore` (`.env`), pushed as `0924f1b`; `.env` is on disk only. `sandbox-1.3.4` (local only, never pushed) showed the trap: a committed `secrets.txt` stays in history after `rm --cached`.
@@ -47,10 +67,32 @@
 | 1.4.3 | 2026-11-19 | Exercise ✓ (scan hit read as read-only; 2 up days; KeyError read bottom-up). Check 3/3 own words ✓ | Zero-based counting: reinforce in 1.5.1 |
 | 1.5.1 | 2026-11-19 | Exercise ✓ (200, 3/3, fresh; 422 on a bad currency). Check 3/3 own words (Q3 "no" without the reason) | Why reference rates aren't tradable prices: revisit in the Stage 1 capstone |
 | 1.5.2 | 2026-11-19 | Exercise ✓ (masked key found; `.env` ignored). Check 2/2 own words ✓ | None |
+| 1.5.3 | 2026-11-20 | Check 2/2 own words ✓ (standard / tool program / ready-made server; too risky) | "Too risky": add least privilege when Gmail comes up in Stage 3 |
+| 1.5.4 | 2026-11-20 | Check 2/2 own words ✓ (hook; skill because it loads only when used) | None |
+| 1.5.5 | 2026-11-20 | Prediction 25× (actual 80×: Fable vs Haiku). Check 2/2 own words ✓ | Price vs quality: "cheap" alone isn't the reason; check quality on a sample (Stage 4 evals) |
+| 1.5.6 | 2026-11-20 | Check 2/2 own words ✓ (file or database; review it in the Optimization Center) | None |
+| 1.6.1 | 2026-11-20 | Prediction ✓ (`fx_rates.py` = workflow, no AI). Check 2/2 own words ✓ (workflow because steps are fixed; cost of error) | None |
+| 1.6.2 | 2026-11-20 | Prediction ✓ (chain stops at step 1). Check 2/2 own words ✓ (your code; so bad data doesn't spoil later steps) | None |
+| 1.6.3 | 2026-11-20 | Predictions 2/2 ✓ (run #2; 3 attempts). Check 2/2 own words (Q1 ✓ retry then alert; Q2 partial: "doesn't loop forever" without *why* that's costly) | Why endless loops hurt: wasted calls/tokens, rate limits or bans, failure never reported. Revisit in Stage 5 |
+| 1.6.4 | 2026-11-20 | Predictions 2/2 ✓ (model asks; safe mode doesn't send). Check 2/2 own words ✓ (least privilege; posting without my OK) | None |
+| 1.C | 2026-11-20 | Prediction ✓ (skips duplicate). Check 2/2 own words ✓ (one week predicts nothing; what it writes and sends) | Comments can be wrong: confirm the header by scanning/reading the code |
+| 2.1 | 2026-11-20 | Install done (second try). Prediction not given (answered by evidence: notes unchanged). Check 2/2 own words ✓ (nothing, plain md; Git backs them up) | "Create new vault" vs "Open folder as vault"; installer location |
+| 2.2 | 2026-11-20 | Prediction ✓ (no, links are just text). Check 2/2 own words ✓ (chat app; rename in Obsidian so links update) | None |
+| 2.3 | 2026-11-20 | Prediction ✓ (neat table, confirmed in Obsidian). Check 2/2 own words ✓ (temporary, reference, permanent; a link) | None |
+| 2.C | 2026-11-20 | Predictions 2/2 ✓ (no memory; cites prompt-injection.md). Check 2/2 own words ✓ (this session already knows; citation lets me check) | None |
+| 3.1 | 2026-11-20 | Approved the settings change; prediction not given. Check 2/2 own words ✓ (advice vs enforced; a Python script) | None |
+| 3.2 | 2026-11-20 | Approved the skill; prediction not given (answer shown by the run). Check 2/2 own words ✓ (loads only when used; deny rules already cover it) | Predictions skipped in 3.1–3.2: late in a long session. Fine, but bring them back next session |
+| 3.3 | 2026-11-20 | Chose Gmail off. Prediction not given. Check 2/2 own words ✓ (neither; direct API because the script needs it) | Predictions skipped 3 lessons in a row |
+| 3.4 | 2026-11-20 | Prediction ✓ exact (3 pass, test_fall fails). Check 2/2 own words ✓ (the test can be wrong; adopt tools when needed) | None |
+| 3.C | 2026-11-20 | Picked LangChain; prediction not given. Check 2/2 own words ✓ (installs are my call; it overlaps what I have) | None |
+| 4.1 | 2026-11-20 | Prediction ✗ (said 2 of 3 ready; actually 0). Check 2/2 own words ✓ (separate API billing; Managed Agents hides the loop, I need to learn it) | None |
 
 ## Stage status
 | Stage | Status |
 |---|---|
 | 0 Orientation | done |
-| 1 Fundamentals | started |
-| 2–6 | not started |
+| 1 Fundamentals | **done** (2026-11-20) |
+| 2 Second Brain | **done** (2026-11-20) |
+| 3 Optimization Center | **done** (2026-11-20) |
+| 4 First agents | started (2026-11-20) |
+| 5–6 | not started |

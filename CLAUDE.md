@@ -60,7 +60,7 @@ If a tangent is far ahead of the user's current stage, say so plainly. Park it a
 - Windows 11 Home, PowerShell 5.1 (which does not support `&&`; use `;`).
 - Claude Code is installed at `C:\Users\aidan\.local\bin\claude.exe`.
 - Python runs with **`py`** (Python 3.15.2, checked 2026-11-17). Plain `python` is only the Microsoft Store shortcut, which prints "Python was not found", so don't use it. **Git for Windows 2.56.1** installed 2026-11-18 at `C:\Program Files\Git` and on the system PATH (verified by running it). Terminals opened before the install won't find `git` until they're reopened. **Node.js is not installed.**
-- Obsidian is not installed yet; that happens in Stage 2.
+- **Obsidian** installed 2026-11-20 at `%LOCALAPPDATA%\Programs\Obsidian` (verified). The vault is `AI-Program` itself; restricted mode (no community plugins). `.obsidian/workspace.json` is git-ignored.
 
 ## File map
 - `HOME.md`: the start page and a map of everything

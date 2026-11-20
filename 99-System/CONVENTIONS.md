@@ -8,3 +8,13 @@
 - **Status words:** `draft`, `active`, `outdated`. Outdated notes say what replaced them and get moved to an archive in Stage 2.
 - **No secrets** in any note, ever.
 - **Templates:** `99-System/templates/`.
+- **Note types and where they live (Lesson 2.3):**
+  | Type | What | Where |
+  |---|---|---|
+  | Temporary | Raw ideas, links, tangents | `00-Inbox/` (sort it weekly) |
+  | Active | What we're working on now | `01-University/` (PROGRESS, current lesson) |
+  | Permanent | One idea, in your own words, linked | `02-Knowledge/concepts/` |
+  | Reference | Facts to look up: decisions, project briefs, tool reviews, stack | `02-Knowledge/decisions/`, `projects/`, `03-Optimization-Center/` |
+  | Long-term record | What happened, kept as history | `02-Knowledge/sessions/`; outdated notes go to an archive |
+- **Folder, link or tag?** Folder = where a note lives (one place). Link = a specific connection between two notes. Tag = a broad theme across folders (`#security`, `#trading`). Prefer links; keep tags few.
+- **Properties:** new concept notes start with a `---` block (`type`, `status`, `tags`, `created`, `lesson`). Never put secrets in properties either.
