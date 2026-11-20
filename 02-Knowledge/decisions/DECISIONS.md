@@ -2,6 +2,11 @@
 
 Newest entries go first. Each entry: date, decision, why, and what would make us revisit it.
 
+## 2026-11-20: First agent = content agent; trading agent parked
+- **What:** the user no longer wants to build the trading research agent. Stage 4 now builds a content agent v1 (drafts only; nothing posted without approval). Trading project parked, not deleted.
+- **Why:** user's choice. The 4.1 build approach (Claude API + tools in Python on the PC) carries over unchanged.
+- **Revisit if:** the user wants the trading assistant back (research-only rules still apply).
+
 ## 2026-11-20: Trading agent v1 will use the Claude API + tool use in Python, run on the PC (proposed in 4.1)
 - **What:** build v1 as a Python script calling the Claude API with our own tools (manual loop or Tool Runner), not Managed Agents, Agent SDK, headless Claude Code or no-code tools.
 - **Why:** visible, testable loop that teaches the fundamentals; reuses venv/.env/pytest/tool gate; cheap; research-only means no risky tools needed.

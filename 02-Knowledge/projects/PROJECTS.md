@@ -2,12 +2,12 @@
 
 These are for context and examples only. Ideas go under each project's "Ideas" heading as they come up.
 
-## 1. Content and social media business
+## 1. Content and social media business **← first agent (chosen 2026-11-20, Stage 4)**
 Research trends → scripts → visuals → voiceover → finished video → publish to YouTube, TikTok, Instagram and Facebook → analytics → learn and scale → monetize.
 - **Rules and risks:** each platform has AI-content disclosure labels, rules against inauthentic behavior and spam (mass-produced or duplicate content), limits on automated posting, and monetization rules that demonetize "reused" or low-effort content. Running multiple accounts is allowed on some platforms and limited on others. Use official publishing APIs only.
 - **Ideas:**
 
-## 2. Trading research and education assistant
+## 2. Trading research and education assistant **(parked 2026-11-20: user no longer wants to build this agent for now)**
 TradingView setups, teaching technical analysis, screening, options research (volatility, volume, liquidity), trade breakdowns (entry, exit, risk/reward), and "is this worth researching?" judgments.
 - **Hard limits:** research and teaching only. No trades, no brokerage access, and risk stated plainly every time.
 - **Existing work:** the user has an earlier project. Don't assume its contents until they share it.
