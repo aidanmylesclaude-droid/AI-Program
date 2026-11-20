@@ -1,0 +1,8 @@
+2026-11-20 08:46:26 INFO  fetching USD -> EUR,GBP,JPY from 2026-11-13 to 2026-11-20
+2026-11-20 08:46:26 INFO  checks passed: 24 rows, 8 dates, newest 2026-11-20
+2026-11-20 08:46:26 INFO  added today's row to history.csv
+2026-11-20 08:46:26 INFO  done
+2026-11-20 08:47:39 INFO  fetching USD -> EUR,GBP,JPY from 2026-11-13 to 2026-11-20
+2026-11-20 08:47:39 INFO  checks passed: 24 rows, 8 dates, newest 2026-11-20
+2026-11-20 08:47:39 INFO  history.csv already has a row for today: not adding a duplicate
+2026-11-20 08:47:39 INFO  done
