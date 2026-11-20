@@ -3,6 +3,7 @@
 These are for context and examples only. Ideas go under each project's "Ideas" heading as they come up.
 
 ## 1. Content and social media business **← first agent (chosen 2026-11-20, Stage 4)**
+- **v1 design:** [[content-agent/DESIGN|Content agent v1 design]]: TikTok, **myth-busting** (factoids, zombie facts, old wives' tales, urban legends, pseudoscience), 5 myths + sourced truth + hooks per run, drafts only.
 Research trends → scripts → visuals → voiceover → finished video → publish to YouTube, TikTok, Instagram and Facebook → analytics → learn and scale → monetize.
 - **Rules and risks:** each platform has AI-content disclosure labels, rules against inauthentic behavior and spam (mass-produced or duplicate content), limits on automated posting, and monetization rules that demonetize "reused" or low-effort content. Running multiple accounts is allowed on some platforms and limited on others. Use official publishing APIs only.
 - **Ideas:**
