@@ -1,0 +1,51 @@
+# Tool review: CapCut AI script-to-video (desktop "AI video maker")
+**Source:** user request (content agent production step, after the code-drawn `make_video.py` prototype was rejected) · **Reviewed:** 2026-11-20 · **Checked against:** pages actually read:
+- capcut.com/resource/ai-generation-and-full-timeline-editing-in-capcut-desktop (dated 2026-11-13)
+- capcut.com/help/monthly-and-yearly-plans (2026-03-25), /help/pro-plans-monthly-credits (2026-03-24), /help/how-much-does-capcut-pro-cost (2026-09-23)
+- capcut.com/clause/material-license-agreement (US version, "Last Updated: January 22, 2026")
+- support.google.com/youtube/answer/14328491 ("Disclosing use of GenAI content", no date shown)
+- support.google.com/youtube/answer/1311392 (YouTube channel monetization policies; "inauthentic content" rename dated 2025-07-15)
+- tiktok.com/community-guidelines/en/integrity-authenticity (released 2026-08-25, effective 2026-09-24)
+- **Couldn't read:** TikTok's support article on AI labels (it loaded empty). The toggle and auto-label details below come from search-result summaries of TikTok's own pages, so they're **not fully verified**.
+
+**Label:** **established** (the CapCut editor itself) · the AI video maker inside it is **experimental** (it's new, its model changes often, and the output quality and cost per video are unknown until tested)
+**Verdict:** **implement now, as a one-video trial** (the app is already installed; use the free credits first; buy Pro for one month only if the trial looks postable)
+
+## Terms used here
+- **Script-to-video:** you paste a finished script; the AI picks or generates visuals, adds a voiceover, captions and music, and lays it all on an editable timeline.
+- **Credits:** CapCut's in-app currency for AI features. Each generation costs some credits, and plans give you a monthly allowance.
+- **B-roll:** the background footage shown while the narrator talks.
+- **9:16:** the vertical shape of a phone screen (TikTok and Shorts).
+- **C2PA / Content Credentials:** hidden labels inside a file that say "made with AI." Platforms read them and can add an AI label automatically.
+- **Content ID:** YouTube's robot that scans audio and video for copyrighted material and can claim the ad money.
+- **Commercial use:** using material to earn money or promote a business. Monetizing a channel probably counts. CapCut's terms don't say clearly, so treat it as commercial.
+
+| Question | Answer |
+|---|---|
+| What is it? | The "AI video maker" in CapCut desktop (New project → AI video maker). It takes a topic or **your own pasted script** and generates scenes, transitions, visuals, an AI voiceover, synced captions and library music. Per CapCut's 2026-11-13 page it uses **Seedance 2.5**, ByteDance's AI video model. CapCut is owned by ByteDance, the same company as TikTok. |
+| What problem does it solve? | The problem we have **today**: the agent writes a good 65–75 second script, but `make_video.py` produced unusable video. This turns the script into a rough vertical cut that you then polish in an editor you already know. |
+| How does it work? | Paste the script → choose aspect ratio (vertical) and a style → Create → it deducts credits (a dialog shows the amount first) → you get a timeline to edit: swap clips, change the voice, fix captions, replace the music → export. "Edit More" at export keeps it editable. Needs an internet connection; the generation runs on CapCut's servers. |
+| How does it plug into Claude Code? | **It doesn't, and it shouldn't.** The handoff is manual: the agent's draft (voiceover script plus `make_pack.py`'s captions and checklist) → you paste it into CapCut. There's no official API (a way for programs to control it) to automate this, and automating posting is off-path anyway (Stage 5+, with platform rules). |
+| Advantages | Already installed and familiar. One tool covers visuals, voice, captions, music and editing. Vertical output is native. You keep full manual control after generation. The editor is mature and widely used. |
+| Disadvantages | **Quality is unknown until one test.** AI clips can look generic or "AI-ish," and that hurts both reach and monetization (see platform rows). Credits per video aren't published. The model and menus change often (the feature was renamed and its model switched during 2026). AI-generated *realistic* scenes need an AI label. Music and stock licensing mostly cover TikTok only, not YouTube (see below). |
+| Cost (rough monthly) | **Not verified.** CapCut publishes no fixed price: it varies by region, device and promotion, and the app's Upgrade screen shows the real number. Third-party figures range from **~$8 to ~$20/month** for Pro. Annual plans give 50% more credits per month. Credits per generation: **unknown**, shown in the app before you confirm. Within budget *if* one Pro month covers roughly 8–15 videos. Check the app's Upgrade and Credits pages before paying. |
+| Difficulty | Low. It's a familiar app and you're the expert user here. Expect 20–45 minutes of fixing per video at first. |
+| Security (data it can reach, third-party code, keys, trifecta legs) | It only sees what you paste or upload (the script, any media). That goes to ByteDance's servers, and CapCut's terms grant it broad rights over user content (reported in 2025; I didn't read the full Terms of Service). So don't upload anything private. There are **no API keys** and it's **not connected to Claude Code or the agent**, so it adds **no trifecta leg**. It's third-party code, but already installed by you, not by this program. |
+| Platform-rules risk (content / e-commerce / trading) | **1. Music (biggest YouTube risk).** CapCut's license: ordinary library "Sounds" are for **personal, non-commercial** use only. "Commercial Sounds" are allowed only "within CapCut, TikTok and TikTok for Business". **YouTube isn't mentioned**, and other platforms need "separate permission… from all necessary rights holders." So **don't use CapCut library music on the YouTube version.** Mute it and add a track from YouTube Studio's own Audio Library, or use a licensed track (Audio Library terms not re-checked here). Otherwise expect Content ID claims. **2. Stock clips, stickers and effects:** only items marked "commercial" may be used commercially, and **if one non-commercial item is mixed in, the whole video becomes non-commercial only.** Each export is a separate license: re-editing an exported video means paying for paid materials again. **3. AI labels.** YouTube: disclose if it "generates a realistic scene that didn't actually occur". **Realistic AI bulls or goldfish count.** AI-written scripts and captions are exempt. A synthetic narrator voice that copies no real person isn't on either list (inference, not a stated rule). YouTube may auto-label from C2PA metadata, and those labels can't be removed. Disclosing doesn't limit reach or money, per YouTube. TikTok (guidelines effective 2026-09-24): label "AI-generated… content that shows realistic-looking scenes or people", or the video may be removed, restricted or labeled. Use the AI-generated toggle when posting (from search summaries). **For a myth-busting channel, realistic fake footage is also a trust problem:** label it every time, and prefer real stock footage where possible. **4. Monetization.** YouTube's "inauthentic content" policy refuses monetization for "AI-generated content made with generic or unoriginal templates giving the impression of mass production without adding the creator's original… insights". It also refuses channels that "stitch together unrelated or inconsistent AI clips". TikTok: "unoriginal or reused material without anything new" is kept off the For You feed. Your researched, sourced script is the "original insight." Don't let every video look like the same template. **5. Health myths:** YouTube won't monetize content that "presents itself as a human expert providing advice" on health. Keep the narrator as a fact-checker who cites sources, not a doctor (this already matches DESIGN.md's never-do list). |
+| Overlap with what I already have (STACK.md) | None. STACK.md has no video tool. `make_video.py` was rejected; `make_pack.py` (voiceover, captions, checklist) still feeds into this. |
+| Helps which project? | Content agent (TikTok + YouTube Shorts myth-busting). Could later help e-commerce product videos, with the same licensing caveats. |
+
+**Reasoning for the verdict:**
+It solves a problem you have right now (script → postable video). Nothing in STACK.md covers it, you already own and know the tool, and a test costs at most a few free credits. That passes "implement now" without breaking "foundation first": it's the production step, not a new agent layer. The verdict is a **trial, not a commitment**, because three things are unknown until you run it once: (a) whether the Seedance visuals look good enough, (b) how many credits one 70-second video uses, and (c) the real Pro price in your region. Run the trial on the bulls script, then decide on Pro.
+
+**Trial checklist (for you to do, in CapCut):**
+1. New project → AI video maker → paste the bulls voiceover script → vertical → Create. Note the **credit cost** the dialog shows before you confirm.
+2. Judge it: would you post it? Note how many clips you had to replace.
+3. Before exporting, swap any library item not marked "commercial". Make the **YouTube version** with CapCut music muted, adding a YouTube Audio Library track in YouTube Studio or a licensed track instead.
+4. When posting realistic AI clips: TikTok AI toggle on; YouTube Studio → Attributes → AI use → **Yes**.
+
+**What would change the verdict:**
+- Trial output not postable after reasonable editing → **ignore** the AI maker. Then use CapCut as a normal editor with real stock footage plus an AI voice, or review a different tool.
+- Credits per video × videos per month beyond a low monthly fee → limit AI generation to a few hero shots, and use stock footage for the rest.
+- CapCut adds YouTube to its permitted platforms for Commercial Sounds → the music workaround is no longer needed.
+- If you ever want the agent to drive video creation automatically: re-review at Stage 5 (it would need an official API, and posting automation raises platform-rules risk).
