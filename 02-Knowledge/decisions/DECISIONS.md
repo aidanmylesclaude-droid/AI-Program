@@ -2,6 +2,11 @@
 
 Newest entries go first. Each entry: date, decision, why, and what would make us revisit it.
 
+## 2026-11-20: Content agent runs on Sonnet 5.5, plain (direct) web search, 1 video per run
+- **What:** model `claude-sonnet-5-5` (was Opus 5.5); `allowed_callers: ["direct"]` (no code sandbox); streaming with max_tokens 40,000.
+- **Why:** measured costs: Opus run 1 $2.34 (sandbox, no document), Opus run 2 $1.51 (cut off), Sonnet run 3 $0.81 (complete, passed). Owner chose the cheaper model.
+- **Revisit if:** quality drops on harder myths (compare Opus vs Sonnet on the same myths with an eval in 4.4), or cost per run needs to fall further (fewer searches, lower effort).
+
 ## 2026-11-20: First agent = content agent; trading agent parked
 - **What:** the user no longer wants to build the trading research agent. Stage 4 now builds a content agent v1 (drafts only; nothing posted without approval). Trading project parked, not deleted.
 - **Why:** user's choice. The 4.1 build approach (Claude API + tools in Python on the PC) carries over unchanged.
