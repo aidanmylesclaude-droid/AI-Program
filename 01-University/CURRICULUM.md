@@ -73,7 +73,7 @@ Each lesson answers: what it is, what it does, why it exists, how it works, how 
 - [x] 4.1 Claude Agent SDK vs Claude Code headless mode vs no-code tools
 *(Changed 2026-11-20: the first agent is the **content agent**; the trading agent is parked.)*
 - [x] 4.2 Design the content agent v1: one job, its tools, what it may never do (platform rules, AI disclosure, approval before anything is posted)
-- [~] 4.3 Build: a single-purpose content research agent (Claude API + tools in Python; needs the user's Console account + API key first)
+- [x] 4.3 Build: a single-purpose content research agent (Claude API + tools in Python; needs the user's Console account + API key first)
 - [ ] 4.4 Evals: testing an agent's outputs
 - [ ] 4.5 Costs: measuring tokens and dollars
 - [ ] 4.C Content agent v1: drafts only, nothing published without your approval
