@@ -17,5 +17,8 @@ CLAUDE.local.md
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
 
+# Rendered videos are big and can be re-made with make_video.py (Lesson 4.3)
+02-Knowledge/projects/content-agent/production/**/*.mp4
+
 # Leftover from the first Obsidian install (Lesson 2.1). Remove this line once the folder is gone.
 /Obsidian/
