@@ -1,0 +1,117 @@
+/* galaxy.css: starfield + nebula look for Obsidian (dark mode).
+   Made by Claude for the AI-Program vault, 2026-11-20. Built-in CSS snippet: no plugins, nothing downloaded.
+   Turn it on/off in Settings > Appearance > CSS snippets. */
+
+.theme-dark {
+  /* deep-space panels, slightly see-through so the stars show behind them */
+  --background-primary: rgba(9, 8, 28, 0.78);
+  --background-primary-alt: rgba(14, 12, 40, 0.80);
+  --background-secondary: rgba(6, 5, 20, 0.84);
+  --background-secondary-alt: rgba(10, 9, 30, 0.86);
+  --background-modifier-border: rgba(150, 120, 255, 0.18);
+  --background-modifier-hover: rgba(140, 110, 255, 0.12);
+
+  /* starlight text and nebula accents */
+  --text-normal: #e6e3ff;
+  --text-muted: #a9a3d6;
+  --text-faint: #6f6a9e;
+  --text-accent: #b79cff;
+  --text-accent-hover: #d6c6ff;
+  --interactive-accent: #8b6cff;
+  --interactive-accent-hover: #a58bff;
+  --link-color: #7fd3ff;
+  --link-color-hover: #b5e8ff;
+  --link-unresolved-color: #ff8fd1;
+  --text-highlight-bg: rgba(255, 143, 209, 0.25);
+  --text-selection: rgba(139, 108, 255, 0.35);
+
+  /* graph view: notes as stars */
+  --graph-node: #d8ccff;
+  --graph-node-focused: #ffffff;
+  --graph-node-unresolved: #ff8fd1;
+  --graph-node-tag: #7fd3ff;
+  --graph-line: rgba(160, 140, 255, 0.28);
+}
+
+/* the sky: nebula clouds + three layers of stars, painted behind everything */
+.theme-dark body,
+body.theme-dark {
+  background-color: #05040f;
+  background-image:
+    radial-gradient(ellipse at 15% 20%, rgba(120, 60, 220, 0.35), transparent 45%),
+    radial-gradient(ellipse at 85% 75%, rgba(40, 110, 230, 0.30), transparent 50%),
+    radial-gradient(ellipse at 60% 10%, rgba(220, 70, 170, 0.18), transparent 40%),
+    radial-gradient(1px 1px at 10% 30%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 25% 80%, #fff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 40% 50%, #cfe8ff 50%, transparent 51%),
+    radial-gradient(1px 1px at 55% 15%, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 70% 60%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 80% 25%, #e8dcff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 90% 90%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 35% 5%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 5% 65%, #cfe8ff 50%, transparent 51%),
+    radial-gradient(1px 1px at 65% 95%, #fff 50%, transparent 51%);
+  background-size: 100% 100%, 100% 100%, 100% 100%,
+    220px 220px, 300px 300px, 260px 260px, 340px 340px, 420px 420px,
+    280px 280px, 380px 380px, 240px 240px, 310px 310px, 360px 360px;
+  background-attachment: fixed;
+}
+
+/* let the sky show through the app's own layers */
+.theme-dark .app-container,
+.theme-dark .horizontal-main-container,
+.theme-dark .workspace,
+.theme-dark .workspace-split,
+.theme-dark .workspace-tabs,
+.theme-dark .workspace-tab-container,
+.theme-dark .workspace-leaf,
+.theme-dark .view-content,
+.theme-dark .markdown-reading-view,
+.theme-dark .markdown-source-view,
+.theme-dark .cm-editor,
+.theme-dark .cm-scroller {
+  background-color: transparent !important;
+}
+
+/* glowing headings, like distant suns */
+.theme-dark .markdown-rendered h1,
+.theme-dark .HyperMD-header-1 {
+  color: #f1ecff;
+  text-shadow: 0 0 12px rgba(160, 120, 255, 0.75), 0 0 28px rgba(110, 80, 255, 0.45);
+}
+.theme-dark .markdown-rendered h2,
+.theme-dark .HyperMD-header-2 {
+  color: #d8ccff;
+  text-shadow: 0 0 10px rgba(127, 211, 255, 0.55);
+}
+.theme-dark .markdown-rendered h3,
+.theme-dark .HyperMD-header-3 {
+  color: #c4b3ff;
+  text-shadow: 0 0 8px rgba(255, 143, 209, 0.4);
+}
+
+/* links glow softly */
+.theme-dark a.internal-link,
+.theme-dark .cm-hmd-internal-link {
+  text-shadow: 0 0 6px rgba(127, 211, 255, 0.45);
+}
+
+/* frosted-glass panels for the sidebars and popups */
+.theme-dark .workspace-ribbon,
+.theme-dark .mod-left-split,
+.theme-dark .mod-right-split,
+.theme-dark .modal,
+.theme-dark .menu,
+.theme-dark .popover {
+  backdrop-filter: blur(6px);
+}
+
+/* tables and code blocks as small dark windows into space */
+.theme-dark .markdown-rendered table th {
+  background: rgba(139, 108, 255, 0.18);
+}
+.theme-dark .markdown-rendered pre,
+.theme-dark .markdown-rendered code {
+  background: rgba(20, 16, 55, 0.7);
+  border: 1px solid rgba(150, 120, 255, 0.2);
+}

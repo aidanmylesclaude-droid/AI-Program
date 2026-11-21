@@ -1,3 +1,8 @@
 {
-  "showRibbon": false
+  "showRibbon": false,
+  "theme": "obsidian",
+  "accentColor": "#8b6cff",
+  "enabledCssSnippets": [
+    "galaxy"
+  ]
 }
