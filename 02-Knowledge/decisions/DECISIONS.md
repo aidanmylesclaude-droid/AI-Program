@@ -2,6 +2,11 @@
 
 Newest entries go first. Each entry: date, decision, why, and what would make us revisit it.
 
+## 2026-11-20: Obsidian restricted mode off for one plugin: Galaxy View (user's choice)
+- **What:** the user installed and kept the community plugin "Galaxy View" 0.6.1 (author "Rick"; 3D graph of the vault). Galaxy look itself comes from the built-in CSS snippet `galaxy.css`.
+- **Why:** user's preference for the 3D galaxy graph. Claude's read-only scan of `main.js` found no network, file-system or process code (only a namespace URL and a comment link); a scan isn't a guarantee.
+- **Revisit if:** the plugin updates (re-scan before accepting), Obsidian shows odd behaviour, or before adding any other plugin (`/tool-review` first; keep plugins few). Supersedes part of the 2026-11-20 "no community plugins" decision.
+
 ## 2026-11-20: Content agent runs on Sonnet 5.5, plain (direct) web search, 1 video per run
 - **What:** model `claude-sonnet-5-5` (was Opus 5.5); `allowed_callers: ["direct"]` (no code sandbox); streaming with max_tokens 40,000.
 - **Why:** measured costs: Opus run 1 $2.34 (sandbox, no document), Opus run 2 $1.51 (cut off), Sonnet run 3 $0.81 (complete, passed). Owner chose the cheaper model.

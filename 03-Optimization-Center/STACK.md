@@ -13,7 +13,7 @@ Only things that are **actually installed and configured** go here. Ideas belong
 | Python 3.15.2 | Runs scripts (use `py`, not `python`) | installed | free | before 2026-11-16 | n/a |
 | Git for Windows 2.56.1 | Version control: snapshots and undo | installed (official installer, `C:\Program Files\Git`; Git added to PATH). Verified by Claude running `git.exe --version` | free | 2026-11-18 | Lesson 1.3.1 |
 | pytest 9.2.0 | Automated tests (foundation for Stage 4 evals) | installed **per project venv** (first: `sandbox-3.4\.venv`), never globally | free | 2026-11-20 | Lesson 3.4 |
-| Obsidian | Vault viewer and editor | **installed 2026-11-20** (`%LOCALAPPDATA%\Programs\Obsidian`); vault = `AI-Program`; restricted mode, no community plugins | free (Sync $4–5/mo and Publish $8–10/mo not needed: Git backs up) | | |
+| Obsidian | Vault viewer and editor | **installed 2026-11-20** (`%LOCALAPPDATA%\Programs\Obsidian`); vault = `AI-Program`; galaxy look via built-in CSS snippet; **1 community plugin: Galaxy View 0.6.1** (3D graph, kept by user 2026-11-20, scanned read-only) | free (Sync $4–5/mo and Publish $8–10/mo not needed: Git backs up) | | |
 
 ## Claude Code security settings (user level, `~\.claude\settings.json`)
 | Setting | Why | Added |
