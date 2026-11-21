@@ -6,6 +6,19 @@ created: 2026-11-20
 lesson: "[[4.2-design-content-agent-v1]]"
 ---
 # Content agent v1: design
+
+## ⚠️ Updated 2026-11-20 (Lesson 4.3): the owner's own system prompt replaces the original output
+The owner wrote a full system prompt: `C:\Users\aidan\content-agent\system_prompt.md`. **It is now the source of truth** for what the agent does. Changes from the original design below:
+- **Platforms:** TikTok **and YouTube Shorts** (same vertical script).
+- **Output:** per run, **1 video by default** (`--count N`): research (2+ independent reliable sources, confidence High/Medium/Low/UNVERIFIED), virality score (≥22/30), **5 hooks**, a **65–75 s shot-list script (165–190 words)** that loops, animation direction, publishing package, notes. UNVERIFIED → no script, status needs-review.
+- **Myth types** (owner's list): misconception, factoid, old wives' tale, urban legend, pseudoscience, partly true.
+- **Unchanged safety core:** web search is the only tool; code saves the file (no write tool); no posting; no medical advice; no mocking; page text is data; never replace one myth with another.
+- **Claude's 3 marked edits to the owner's prompt ([EDIT] in the file):** house style and palette placeholders → "propose one in Notes" until the owner picks; added an **AI disclosure** line to Publishing (TikTok and YouTube require labels for realistic AI-generated content).
+- **To verify before relying on it:** the Creator Rewards "over 1 minute" rule (check TikTok's own page; programs change).
+- **Code done check** (agent.py): frontmatter keys, confidence value, 2+ links, 5 hooks + recommended, **voiceover word count counted by the code** (not trusted from the model), self-reported vs counted mismatch.
+
+---
+*Original 4.2 design (kept for history):*
 **Platform:** TikTok · **Niche:** **myth-busting**: things most people believe that are actually false, and the surprising truth ("I was today years old when I learned…") · **Build approach:** Claude API + tools in Python on the PC (decision 2026-11-20, Lesson 4.1)
 
 ## Niche definition (from the user, 2026-11-20)
@@ -38,8 +51,8 @@ One Markdown file: `02-Knowledge/projects/content-agent/drafts/YYYY-MM-DD-myths.
 | Tool | Why | Risk |
 |---|---|---|
 | Web search (read-only, Anthropic server tool) | Find and check facts | Untrusted content → 1 trifecta leg |
-| save_draft (our code; writes only inside `drafts/`) | Save the output | None outside that folder |
-No posting, no accounts, no email, no file access elsewhere. **Trifecta legs: 1 of 3** (untrusted content only).
+| ~~save_draft tool~~ → **our code saves the final answer** into `drafts/` (changed in 4.3) | Save the output | The model has **no write tool at all** and never chooses a path |
+No posting, no accounts, no email, no file access. **Trifecta legs: 1 of 3** (untrusted content only).
 
 ## 5. Never-do list
 - Post, comment, DM, like, follow, or log in to any account. (No tools for it.)
